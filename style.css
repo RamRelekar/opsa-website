@@ -1,0 +1,73 @@
+:root{
+  --navy:#0B2D5B; --navy-2:#123A70; --orange:#FF7A00; --orange-dark:#E06A00;
+  --ink:#14213D; --muted:#5B6576; --line:#E4E8EF; --bg:#FFFFFF; --soft:#F5F7FB;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:16px}
+a{color:var(--navy-2)}
+img{max-width:100%;display:block}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+/* header */
+header.site{background:var(--navy);position:sticky;top:0;z-index:10}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
+.brand img{height:30px;width:auto}
+nav.main{display:flex;gap:4px;flex-wrap:wrap}
+nav.main a{color:#DCE4F2;text-decoration:none;font-weight:600;font-size:15px;padding:8px 10px;border-radius:8px}
+nav.main a:hover,nav.main a[aria-current="page"]{color:#fff;background:rgba(255,255,255,.1)}
+.menu-btn{display:none;background:none;border:1px solid rgba(255,255,255,.3);color:#fff;border-radius:8px;padding:6px 10px;font-size:15px}
+@media (max-width:760px){
+  .menu-btn{display:block}
+  nav.main{display:none;position:absolute;left:0;right:0;top:64px;background:var(--navy);flex-direction:column;padding:8px 20px 16px}
+  nav.main.open{display:flex}
+}
+
+/* hero */
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;padding:64px 0 72px}
+.hero h1{font-size:clamp(30px,5vw,48px);line-height:1.15;margin:0 0 14px;letter-spacing:-.5px}
+.hero h1 span{color:var(--orange)}
+.hero p.lead{font-size:clamp(17px,2.2vw,20px);color:#D3DDEE;max-width:620px;margin:0 0 28px}
+.tagline{display:inline-block;font-weight:800;letter-spacing:3px;font-size:13px;color:var(--orange);margin-bottom:14px}
+.btn{display:inline-block;background:var(--orange);color:#fff;text-decoration:none;font-weight:700;padding:13px 22px;border-radius:10px}
+.btn:hover{background:var(--orange-dark)}
+.btn.ghost{background:transparent;border:1.5px solid rgba(255,255,255,.5);margin-left:8px}
+.badge{display:block;margin-top:22px;font-size:14px;color:#D3DDEE}
+
+/* sections */
+section{padding:56px 0}
+section.alt{background:var(--soft)}
+h2{font-size:clamp(24px,3.4vw,32px);margin:0 0 8px;color:var(--navy)}
+.sub{color:var(--muted);margin:0 0 28px;max-width:640px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px}
+.card h3{margin:0 0 6px;font-size:18px;color:var(--navy)}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.card .tag{display:inline-block;font-size:12px;font-weight:700;color:var(--orange);background:#FFF2E5;border-radius:999px;padding:2px 10px;margin-bottom:10px}
+.steps{counter-reset:s;display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.steps .card{position:relative;padding-top:52px}
+.steps .card::before{counter-increment:s;content:counter(s);position:absolute;top:16px;left:20px;width:28px;height:28px;border-radius:50%;background:var(--navy);color:#fff;font-weight:700;display:grid;place-items:center;font-size:14px}
+.soon{opacity:.75}
+
+/* legal / text pages */
+.page-head{background:var(--navy);color:#fff;padding:40px 0}
+.page-head h1{margin:0;font-size:clamp(26px,4vw,38px)}
+.page-head p{margin:6px 0 0;color:#C9D4E8}
+.prose{max-width:780px;padding:40px 20px 64px;margin:0 auto}
+.prose h2{font-size:22px;margin:32px 0 8px}
+.prose h3{font-size:18px;margin:22px 0 6px;color:var(--navy)}
+.prose ul{padding-left:22px}
+.prose li{margin:4px 0}
+.note{background:#FFF7EE;border-left:4px solid var(--orange);padding:12px 16px;border-radius:6px;color:#5a3a12;font-size:15px}
+table.info{border-collapse:collapse;width:100%;margin:12px 0}
+table.info td{border:1px solid var(--line);padding:10px 12px;vertical-align:top}
+table.info td:first-child{font-weight:600;width:38%;background:var(--soft)}
+
+/* footer */
+footer.site{background:#081F40;color:#AEBBD1;padding:40px 0 24px;font-size:14px}
+footer.site .cols{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+footer.site h4{color:#fff;margin:0 0 10px;font-size:15px}
+footer.site a{color:#AEBBD1;text-decoration:none;display:block;margin:4px 0}
+footer.site a:hover{color:#fff}
+footer.site .legal{border-top:1px solid rgba(255,255,255,.1);margin-top:28px;padding-top:16px}
+footer.site img{height:26px;width:auto;margin-bottom:10px}
