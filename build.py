@@ -109,15 +109,6 @@ page("index.html", "OPSA | Book, hire and get it done",
   </div>
 </div></section>
 
-<section class="alt"><div class="wrap">
-  <h2>Coming next</h2>
-  <p class="sub">OPSA is growing into one app for everyday needs.</p>
-  <div class="grid soon">
-    <div class="card"><span class="tag">Coming soon</span><h3>Food &amp; groceries</h3><p>Food delivery and quick commerce.</p></div>
-    <div class="card"><span class="tag">Coming soon</span><h3>Rides &amp; transport</h3><p>Taxi, bike and goods transport.</p></div>
-    <div class="card"><span class="tag">Coming soon</span><h3>Travel &amp; tickets</h3><p>Hotels, trains, buses, flights and events.</p></div>
-  </div>
-</div></section>
 """)
 
 # ---------- About ----------
