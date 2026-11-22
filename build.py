@@ -69,7 +69,7 @@ page("index.html", "OPSA | Book, hire and get it done",
      """
 <section class="hero"><div class="wrap">
   <div class="tagline">BOOK &bull; HIRE &bull; GET IT DONE</div>
-  <h1>Ghar ka kaam? Event ka staff?<br><span>Ek jagah.</span></h1>
+  <h1>Home services. Event staff.<br><span>One app.</span></h1>
   <p class="lead">OPSA connects you with verified waiters, butlers, chefs and housekeeping staff, and with
   fixed-price home services, booked in a few taps and paid safely online.</p>
   <a class="btn" href="contact.html">Contact us</a>
