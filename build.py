@@ -45,7 +45,7 @@ def page(fname, title, desc, body):
   <div class="cols">
     <div><img src="assets/logo-white.png" alt="OPSA"><div>Online Platform Services Available.<br>Book &bull; Hire &bull; Get it done.</div></div>
     <div><h4>Company</h4><a href="about.html">About us</a><a href="contact.html">Contact us</a></div>
-    <div><h4>Policies</h4><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a><a href="refund.html">Refund &amp; Cancellation</a></div>
+    <div><h4>Policies</h4><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a><a href="refund.html">Refund &amp; Cancellation</a><a href="delete-account.html">Delete Account</a></div>
     <div><h4>Reach us</h4><a href="mailto:{c['email']}">{c['email']}</a><a href="tel:{c['phone'].replace(' ', '')}">{c['phone']}</a><span>{c['address']}</span></div>
   </div>
   <div class="legal">&copy; 2026 OPSA. Operated by {c['owner']}, {c['address']}. All rights reserved.</div>
@@ -314,6 +314,32 @@ when booking, within the service areas shown in the app.</p>
 
 <h2>6. Contact</h2>
 <p>For any cancellation or refund question: <a href="mailto:{{email}}">{{email}}</a> &middot; {{phone}}</p>
+""")
+
+# ---------- Account deletion ----------
+legal("delete-account.html", "Delete Your Account",
+      "<p>You can ask OPSA to delete your account and personal data at any time. This page explains how, and what we keep.</p>",
+      """
+<h2>How to request deletion</h2>
+<ol><li>Email <a href="mailto:{{email}}?subject=Delete%20my%20OPSA%20account">{{email}}</a> with the subject &ldquo;Delete my OPSA account&rdquo;.</li>
+<li>Send it from the email address or phone number registered with your account, so we can match it. Do not share OTPs or passwords.</li>
+<li>We confirm by email once your account is deleted. We process requests within <strong>30 days</strong>.</li></ol>
+<p>Once the in-app option is live, you can also delete your account from the app under Profile.</p>
+
+<h2>What gets deleted</h2>
+<ul><li>Your name, email, profile photo and address</li><li>Your phone number, which is replaced so it no longer identifies you</li>
+<li>Your saved favourites, device push tokens and location history</li><li>Your login sessions, which end immediately</li></ul>
+
+<h2>What we keep, and why</h2>
+<ul><li><strong>Payment and payout records</strong>: needed for tax, accounting and dispute records, for as long as the law requires.</li>
+<li><strong>KYC and verification records</strong> (masked identity numbers only): kept for legal compliance, as set out in our <a href="privacy.html">Privacy Policy</a>.</li></ul>
+
+<h2>Before you delete</h2>
+<ul><li>Finish or cancel any booking or job in progress. We cannot delete an account with active work or held payments.</li>
+<li>Withdraw any balance you are owed before deletion, or we will pay it to the bank or UPI details on file before closing the account.</li></ul>
+
+<h2>Questions</h2>
+<p>Write to <a href="mailto:{{email}}">{{email}}</a> or call {{phone}}. For how we handle your data in general, see the <a href="privacy.html">Privacy Policy</a>.</p>
 """)
 
 print("built", sorted(f for f in os.listdir(HERE) if f.endswith(".html")))
